@@ -1,0 +1,19 @@
+{
+    "name": "pmvc-plugin/thumbnail",
+    "description": "PMVC Thumbnail Helper",
+    "type": "library",
+    "homepage": "https://github.com/pmvc/pmvc",
+    "keywords": ["thumb", "pmvc", "plug-in"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hill",
+            "email": "hill@kimo.com"
+        }
+    ],
+    "require": {
+        "pmvc/pmvc": "*",
+        "pmvc-plugin/image": "*"
+    },
+    "minimum-stability": "dev"
+}
