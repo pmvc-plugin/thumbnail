@@ -13,6 +13,7 @@
     ],
     "require": {
         "pmvc/pmvc": "*",
+        "pmvc-plugin/color": "*",
         "pmvc-plugin/image": "*"
     },
     "minimum-stability": "dev"
