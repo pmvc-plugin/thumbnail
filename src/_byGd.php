@@ -29,7 +29,9 @@ class ByGd
             $tmpFile = $io->save();
             copy($tmpFile, $exportFilePath);
         }
-        ImageDestroy($newImage);
+        if (\PMVC\plug('image')->isGd($newImage)) {
+            ImageDestroy($newImage);
+        }
     }
 
     private function _cookNewSize(
@@ -82,7 +84,6 @@ class ByGd
         $pColor = \PMVC\plug('color');
         $pColor->fill($imOut, $pColor->hexToRgb($caller['color']));
         $srcSize = $fileIn->getSize();
-        
         imagecopyresized(
             $imOut,
             $fileIn->toGd(),
