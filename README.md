@@ -8,6 +8,7 @@ thumbnail
 ===============
 
 ## How to use
+   * https://github.com/pmvc-plugin/thumbnail/blob/master/demo.php
 
 ## Thumb type
    * type 0 (New size not equal defined size)
