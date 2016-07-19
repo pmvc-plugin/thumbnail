@@ -7,6 +7,27 @@
 thumbnail
 ===============
 
+## How to use
+
+## Thumb type
+   * type 0 (New size not equal defined size)
+      * New image size auto fit by ratio
+      * Canvans size same with new image size
+   * type 1
+      * New image size auto fit by ratio.
+      * Canvans will fill with background color, and size same with defined.
+   * type 2
+      * New image will force to max one between width and height.
+      * Canvans size same with defined size.
+      * Auot change image location
+   * type 3
+      * Same with type2 but if image origin size smaller than new size, will keep origin size.
+   * type 4
+      * Same with type0 but if origin size same smaller than new size, will keep origin one.
+   * type 5
+      * For security issue, do 1:1 change. 
+
+
 ## Install with Composer
 ### 1. Download composer
    * mkdir test_folder
