@@ -47,30 +47,54 @@ class ByGd
         switch ($canvasType) {
             default:
             case 0:
-                return $this->create(
-                    $fileIn,
-                    $ratio->newSize,
-                    $ratio->newSize,
-                    new Coord2D(0,0)
-                );
+                $toSize = $ratio->newSize;
+                $toLoc = new Coord2D(0,0);
+                $canvasSize = $ratio->newSize;
+                break;
             case 1:
-                return $this->create(
-                    $fileIn,
-                    $dstSize,
-                    $ratio->newSize,
-                    $ratio->locForNewSize
-                );
+                $toSize = $ratio->newSize;
+                $toLoc = $ratio->locForNewSize;
+                $canvasSize = $dstSize;
                 break;
             case 2:
-                $orgSize = $ratio->origSize; 
-                return $this->create(
-                    $fileIn,
-                    $dstSize,
-                    $ratio->maxSize,
-                    $ratio->locForSameSize
-                );
+                $toSize = $ratio->maxSize;
+                $toLoc = $ratio->locForMaxSize;
+                $canvasSize = $dstSize;
+                break;
+            case 3:
+                $toSize = $ratio->maxSize;
+                $toLoc = $ratio->locForMaxSize;
+                $canvasSize = $dstSize;
+                if ($ratio->origSize->h <= $dstSize->h &&
+                    $ratio->origSize->w <= $dstSize->w
+                ) {
+                    $toSize = $ratio->origSize;
+                    $toLoc = $ratio->locForOrigSize;
+                }
+                break;
+            case 4:
+                $toSize = $ratio->newSize;
+                $toLoc = new Coord2D(0,0);
+                $canvasSize = $ratio->newSize;
+                if ($ratio->origSize->h <= $dstSize->h &&
+                    $ratio->origSize->w <= $dstSize->w
+                ) {
+                    $toSize = $ratio->origSize;
+                    $canvasSize = $ratio->origSize;
+                }
+                break;
+            case 5:
+                $toSize = $ratio->origSize;
+                $toLoc = new Coord2D(0,0);
+                $canvasSize = $ratio->origSize;
                 break;
         }
+        return $this->create(
+            $fileIn,
+            $canvasSize,
+            $toSize,
+            $toLoc
+        );
     }
     
     function create(
