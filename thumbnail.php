@@ -24,6 +24,6 @@ class thumbnail extends \PMVC\PlugIn
     function toThumb($fileIn, $fileOut=null)
     {
         $fIn = new ImageFile($fileIn);
-        return $this->byGd($fIn, $fileOut);
+        return $this->by_gd($fIn, $fileOut);
     }
 }
