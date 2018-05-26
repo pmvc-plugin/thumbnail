@@ -29,9 +29,6 @@ class ByGd
             $tmpFile = $io->save();
             copy($tmpFile, $exportFilePath);
         }
-        if (\PMVC\plug('image')->isGd($newImage)) {
-            ImageDestroy($newImage);
-        }
     }
 
     private function _cookNewSize(
