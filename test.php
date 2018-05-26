@@ -29,7 +29,7 @@ class ThumbnailTest extends PHPUnit_Framework_TestCase
        ]);
        $output = \PMVC\plug('tmp')->file();
        $pThumb->toThumb(DEMO_PIC,$output ); 
-       $image = \PMVC\plug('image')->toImage($output);
+       $image = \PMVC\plug('image')->create($output);
        $this->assertEquals('png', $image->getExt());
     }
 

@@ -26,7 +26,7 @@ thumbnail
    * type 4
       * Same with type0 but if origin size same smaller than new size, will keep origin one.
    * type 5
-      * For security issue, do 1:1 change. 
+      * For security purpose, do 1:1 change. 
 
 
 ## Install with Composer

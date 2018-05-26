@@ -8,4 +8,4 @@ $pThumb = \PMVC\plug('thumbnail', [
 'h'=>180,
 'type'=>2
 ]);
-$pThumb->toThumb('face.png','face_new.png'); 
+$pThumb->toThumb('face.jpg','face_new.png'); 

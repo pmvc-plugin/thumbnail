@@ -108,8 +108,9 @@ class ByGd
         $pColor = \PMVC\plug('color');
         $pColor->fill($imOut, $pColor->hexToRgb($caller['color']));
         $srcSize = $fileIn->getSize();
+
         imagecopyresized(
-            $imOut,
+            $imOut->toGd(),
             $fileIn->toGd(),
             $dstLoc->x,
             $dstLoc->y,
