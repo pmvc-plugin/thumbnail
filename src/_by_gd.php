@@ -11,6 +11,15 @@ ${_INIT_CONFIG}[_CLASS] = __NAMESPACE__.'\ByGd';
 
 class ByGd
 {
+    private $_func;
+
+    public function __construct()
+    {
+        $this->_func = (is_callable('imagecopyresampled')) ?
+            'imagecopyresampled' :
+            'imagecopyresized';
+    }
+
     public function __invoke(
         $inputFile,
         $exportFilePath = null,
@@ -55,7 +64,8 @@ class ByGd
         $srcSize = $fileIn->getSize();
         
         // http://php.net/manual/en/function.imagecopyresized.php
-        imagecopyresized(
+        call_user_func(
+            $this->_func,
             $imageOut->toGd(),
             $fileIn->toGd(),
             $toLoc->x,
