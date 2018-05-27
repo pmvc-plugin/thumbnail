@@ -22,7 +22,7 @@ thumbnail
       * <img src="demo/face_new_1.png">
    * type 2
       * New image will force to max one between width and height.
-      * Canvans size same with defined size.
+      * Canvans size same with defined.
       * Auot change image location
       * <img src="demo/face_new_2.png">
    * type 3
