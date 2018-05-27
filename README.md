@@ -14,7 +14,7 @@ thumbnail
 ## Thumb type
    * type 0 (New size not equal defined size)
       * New image size auto fit by ratio
-      * Canvans size same with expected new image size
+      * Canvans size will same with new image size.
       * <img src="demo/face_new_0.png">
    * type 1
       * New image size auto fit by ratio.

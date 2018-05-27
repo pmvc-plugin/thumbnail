@@ -4,7 +4,7 @@ include '../vendor/autoload.php';
 \PMVC\addPlugInFolders(['../../']);
 
 $pThumb = \PMVC\plug('thumbnail', [
-    'w'=>100,
+    'w'=>200,
     'h'=>100,
     'type'=>0,
     'fill'=>'#000'
