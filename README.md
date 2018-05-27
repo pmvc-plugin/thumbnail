@@ -6,6 +6,7 @@
 
 thumbnail
 ===============
+<img src="demo/face.jpg">
 
 ## How to use
    * https://github.com/pmvc-plugin/thumbnail/blob/master/demo.php
@@ -13,20 +14,26 @@ thumbnail
 ## Thumb type
    * type 0 (New size not equal defined size)
       * New image size auto fit by ratio
-      * Canvans size same with new image size
+      * Canvans size same with expected new image size
+      * <img src="demo/face_new_0.png">
    * type 1
       * New image size auto fit by ratio.
-      * Canvans will fill with background color, and size same with defined.
+      * Canvans will fill with background color, and width and height will same with defined.
+      * <img src="demo/face_new_1.png">
    * type 2
       * New image will force to max one between width and height.
       * Canvans size same with defined size.
       * Auot change image location
+      * <img src="demo/face_new_2.png">
    * type 3
-      * Same with type2 but if image origin size smaller than new size, will keep origin size.
+      * Same with type2 but if image original size smaller than new size, will keep original one.
+      * <img src="demo/face_new_3.png">
    * type 4
-      * Same with type0 but if origin size same smaller than new size, will keep origin one.
+      * Same with type0 but if original size smaller than new size, will keep original one.
+      * <img src="demo/face_new_4.png">
    * type 5
       * For security purpose, do 1:1 change. 
+      * <img src="demo/face_new_5.png">
 
 
 ## Install with Composer
