@@ -9,7 +9,7 @@ thumbnail
 <img src="demo/face.jpg">
 
 ## How to use
-   * https://github.com/pmvc-plugin/thumbnail/blob/master/demo.php
+   * https://github.com/pmvc-plugin/thumbnail/blob/master/demo/demo.php
 
 ## Thumb type
    * type 0 (New size not equal defined size)
