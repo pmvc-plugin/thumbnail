@@ -2,4 +2,3 @@ vendor
 composer.lock
 .php_cs.cache
 .*.sw?
-face_new.png
